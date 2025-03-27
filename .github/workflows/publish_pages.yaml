@@ -46,7 +46,9 @@ jobs:
         run: npm ci
 
       - name: Build GitHub Pages
-        run: npm run build
+        run: |
+          npm run build
+          mv src/index.html dist/public/index.html
 
       - name: Upload GitHub Pages
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
