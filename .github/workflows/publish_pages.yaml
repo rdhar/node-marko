@@ -48,12 +48,12 @@ jobs:
       - name: Build GitHub Pages
         run: |
           npm run build
-          mv src/index.html dist/public/index.html
+          mv src/index.html dist/index.html
 
       - name: Upload GitHub Pages
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
         with:
-          path: dist/public
+          path: dist
           retention-days: 1
 
       - name: Publish GitHub Pages
