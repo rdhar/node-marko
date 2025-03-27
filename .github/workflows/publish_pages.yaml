@@ -2,8 +2,7 @@
 name: Publish Pages
 
 on:
-  pull_request:
-    branches: [main]
+  push:
     paths: [src/**]
 
 jobs:
