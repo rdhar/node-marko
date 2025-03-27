@@ -3,7 +3,6 @@ name: Publish Pages
 
 on:
   push:
-    paths: [src/**]
 
 jobs:
   Pages:
