@@ -53,7 +53,7 @@ jobs:
 
       - name: Build GitHub Pages
         env:
-          BASE_URL: ${{ github.repository }}
+          BASE_URL: node-marko/
         run: npm run build
 
       - name: Upload GitHub Pages
