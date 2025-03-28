@@ -47,8 +47,6 @@ jobs:
         run: npm ci
 
       - name: Build GitHub Pages
-        env:
-          BASE_URL: dist/public
         run: npm run build
 
       - name: Upload GitHub Pages
