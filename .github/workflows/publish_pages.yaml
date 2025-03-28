@@ -3,13 +3,14 @@ name: Publish Pages
 
 on:
   push:
+    branches: [main]
+    paths: [src/**, .github/workflows/publish_pages.yaml]
 
 jobs:
   Pages:
     runs-on: [ubuntu-24.04]
 
     permissions:
-      actions: read # Required to download repository artifact.
       contents: read # Required to checkout repository.
       id-token: write # Required to authenticate via OIDC.
       pages: write # Required to publish GitHub Pages.
@@ -46,12 +47,14 @@ jobs:
         run: npm ci
 
       - name: Build GitHub Pages
+        env:
+          BASE_URL: /${{ github.event.repository.name }}/
         run: npm run build
 
       - name: Upload GitHub Pages
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
         with:
-          path: dist
+          path: dist/public/
           retention-days: 1
 
       - name: Publish GitHub Pages
