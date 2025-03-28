@@ -32,7 +32,7 @@ jobs:
         uses: actions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e # v4.3.0
         with:
           cache: npm
-          node-version: 23
+          node-version: 22
 
       - name: Cache Node modules
         id: cache
