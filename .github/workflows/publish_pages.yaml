@@ -3,13 +3,14 @@ name: Publish Pages
 
 on:
   push:
+    # branches: [main]
+    paths: [src/**, .github/workflows/publish_pages.yaml]
 
 jobs:
   Pages:
     runs-on: [ubuntu-24.04]
 
     permissions:
-      actions: read # Required to download repository artifact.
       contents: read # Required to checkout repository.
       id-token: write # Required to authenticate via OIDC.
       pages: write # Required to publish GitHub Pages.
