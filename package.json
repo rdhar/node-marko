@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "@marko/run": "0.6.3",
-    "@marko/run-adapter-static": "1.0.1"
+    "@marko/run-adapter-static": "1.0.2"
   },
   "private": true,
   "scripts": {
