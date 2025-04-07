@@ -7,7 +7,7 @@
     "marko": "5.37.27"
   },
   "devDependencies": {
-    "@marko/run": "0.6.2",
+    "@marko/run": "0.6.3",
     "@marko/run-adapter-static": "1.0.1"
   },
   "private": true,
